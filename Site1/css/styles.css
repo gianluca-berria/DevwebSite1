@@ -1,0 +1,70 @@
+:root {
+  --cor-fundo: #121212;
+  --cor-card: #1e1e1e;
+  --cor-primaria: #ff6b35;
+  --cor-secundaria: #398f5d;
+  --cor-texto: #f1f1f1;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-style: var(--cor-texto);
+}
+
+.card {
+  background-color: var(--cor-card);
+  border: none;
+  border-radius: 10px;
+  font-style: var(--cor-texto);
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  border: none;
+  font-style: var(--cor-texto);
+}
+
+.btn-success {
+  background-color: var(--cor-secundaria);
+  border: none;
+  font-style: var(--cor-texto);
+}
+
+.btn-dark {
+  background-color: #000;
+  font-style: var(--cor-texto);
+}
+
+.img-receita {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-image: url("https://www.galbani.com.br/wp-content/uploads/2024/10/Sanduiche-2-1-scaled.webp");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* esquerda */
+body::before {
+  left: 0;
+}
+
+/* direita */
+body::after {
+  right: 0;
+  transform: scaleX(-1); /* espelha para variar */
+}
